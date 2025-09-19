@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones - Felipe DSA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .certification {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .certification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .certification-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .certification-date {
+            font-style: italic;
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .certification-issuer {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .certification-description {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .certification-skills {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .certification-skills h4 {
+            margin-bottom: 10px;
+            color: #2c5aa0;
+        }
+
+        .certification-skills ul {
+            margin-left: 20px;
+        }
+
+        .certification-skills li {
+            margin-bottom: 5px;
+        }
+
+        .certification-link {
+            display: inline-block;
+            background-color: #2c5aa0;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .certification-link:hover {
+            background-color: #1e3d6f;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-active {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-expired {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                margin: 0;
+                padding: 15px;
+            }
+            
+            .certification {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .certification-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .certification-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Volver al CV</a>
+    
+    <div class="header">
+        <h1>Certificaciones Profesionales</h1>
+        <p>Felipe DSA - Especialista en Tecnología y Ciberseguridad</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certificaciones de Ciberseguridad</h2>
+        
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Introducción a la Ciberseguridad</div>
+                    <div class="certification-issuer">CISCO NETWORK ACADEMY</div>
+                </div>
+                <div>
+                    <div class="certification-date">2024</div>
+                    <span class="status-badge status-active">Activa</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Curso fundamental que cubre los conceptos básicos de ciberseguridad, incluyendo amenazas, vulnerabilidades, y las mejores prácticas para proteger sistemas y redes. Este curso forma parte del Career Path de Ciberseguridad de Cisco Network Academy.</p>
+            </div>
+            <div class="certification-skills">
+                <h4>Habilidades Desarrolladas:</h4>
+                <ul>
+                    <li>Identificación de amenazas de ciberseguridad</li>
+                    <li>Análisis de vulnerabilidades</li>
+                    <li>Implementación de medidas de seguridad básicas</li>
+                    <li>Comprensión de los principios de confidencialidad, integridad y disponibilidad</li>
+                </ul>
+            </div>
+            <a href="#" class="certification-link">Ver Certificado</a>
+        </div>
+
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Introducción a Cisco Packet Tracer</div>
+                    <div class="certification-issuer">CISCO NETWORK ACADEMY</div>
+                </div>
+                <div>
+                    <div class="certification-date">2024</div>
+                    <span class="status-badge status-active">Activa</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Curso especializado en el manejo de Cisco Packet Tracer, la herramienta líder de simulación y visualización de redes. Aprendizaje de configuración de dispositivos de red, protocolos y troubleshooting en un entorno virtual.</p>
+            </div>
+            <div class="certification-skills">
+                <h4>Habilidades Desarrolladas:</h4>
+                <ul>
+                    <li>Simulación de topologías de red</li>
+                    <li>Configuración de routers y switches</li>
+                    <li>Implementación de protocolos de red</li>
+                    <li>Diagnóstico y resolución de problemas de conectividad</li>
+                </ul>
+            </div>
+            <a href="#" class="certification-link">Ver Certificado</a>
+        </div>
+
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Curso Técnico en Ciberseguridad</div>
+                    <div class="certification-issuer">Academia DarFe.es</div>
+                </div>
+                <div>
+                    <div class="certification-date">2024</div>
+                    <span class="status-badge status-active">Activa</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Curso técnico especializado en ciberseguridad con enfoque práctico. Cubre aspectos avanzados de seguridad informática, análisis de malware, y técnicas de protección de sistemas.</p>
+            </div>
+            <div class="certification-skills">
+                <h4>Habilidades Desarrolladas:</h4>
+                <ul>
+                    <li>Análisis de malware y amenazas</li>
+                    <li>Técnicas de hardening de sistemas</li>
+                    <li>Implementación de políticas de seguridad</li>
+                    <li>Respuesta a incidentes de seguridad</li>
+                </ul>
+            </div>
+            <a href="#" class="certification-link">Ver Certificado</a>
+        </div>
+
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Digital Forensics Masterclass: Computer Forensics DFMC+ DFIR</div>
+                    <div class="certification-issuer">Udemy - OCSALY Academy</div>
+                </div>
+                <div>
+                    <div class="certification-date">2024</div>
+                    <span class="status-badge status-active">Activa</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Masterclass especializada en forensia digital y respuesta a incidentes. Curso avanzado que cubre técnicas de investigación forense, análisis de evidencia digital, y procedimientos de respuesta a incidentes de ciberseguridad.</p>
+            </div>
+            <div class="certification-skills">
+                <h4>Habilidades Desarrolladas:</h4>
+                <ul>
+                    <li>Análisis forense de sistemas operativos</li>
+                    <li>Recuperación de evidencia digital</li>
+                    <li>Investigación de incidentes de seguridad</li>
+                    <li>Documentación y presentación de evidencia</li>
+                    <li>Uso de herramientas forenses especializadas</li>
+                </ul>
+            </div>
+            <a href="#" class="certification-link">Ver Certificado</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certificaciones en Desarrollo</h2>
+        
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">AWS Certified Cloud Practitioner</div>
+                    <div class="certification-issuer">Amazon Web Services</div>
+                </div>
+                <div>
+                    <div class="certification-date">En Progreso</div>
+                    <span class="status-badge status-pending">En Curso</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Certificación fundamental de AWS que valida el conocimiento básico de servicios en la nube y arquitecturas de AWS. Preparación en curso para el examen oficial.</p>
+            </div>
+        </div>
+
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">CompTIA Security+</div>
+                    <div class="certification-issuer">CompTIA</div>
+                </div>
+                <div>
+                    <div class="certification-date">Planificada 2025</div>
+                    <span class="status-badge status-pending">Planificada</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Certificación internacional reconocida en ciberseguridad que valida las habilidades fundamentales necesarias para realizar funciones de seguridad de TI.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certificaciones Académicas</h2>
+        
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Licenciatura en Sistemas de la Información</div>
+                    <div class="certification-issuer">Universidad Nacional de Luján</div>
+                </div>
+                <div>
+                    <div class="certification-date">2025 (En Curso)</div>
+                    <span class="status-badge status-pending">En Progreso</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Carrera universitaria en curso que proporciona una base sólida en sistemas de información, programación, bases de datos, y gestión de proyectos tecnológicos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Cursos Complementarios</h2>
+        
+        <div class="certification">
+            <div class="certification-header">
+                <div>
+                    <div class="certification-title">Programación Web Full Stack</div>
+                    <div class="certification-issuer">Autodidacta - Proyectos Personales</div>
+                </div>
+                <div>
+                    <div class="certification-date">2024</div>
+                    <span class="status-badge status-active">Completado</span>
+                </div>
+            </div>
+            <div class="certification-description">
+                <p>Desarrollo de habilidades en programación web a través de proyectos personales, incluyendo el desarrollo del sistema AgroMax con tecnologías modernas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+        <p><strong>Nota:</strong> Todas las certificaciones están respaldadas por documentación oficial y pueden ser verificadas mediante solicitud.</p>
+        <p>Para más información sobre certificaciones específicas, contactar a: <a href="mailto:felipedesananiceto@gmail.com">felipedesananiceto@gmail.com</a></p>
+    </div>
+</body>
+</html>
