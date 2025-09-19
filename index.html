@@ -158,6 +158,17 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
+        #generate-cv-btn:hover {
+            background-color: #1e3d6f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        #generate-cv-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
         @media print {
             body {
                 max-width: none;
@@ -448,5 +459,16 @@
             <p>Disponibles bajo solicitud</p>
         </div>
     </div>
+
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; border-top: 2px solid #333;">
+        <button id="generate-cv-btn" style="background-color: #2c5aa0; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: background-color 0.3s, transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            Generar CV
+        </button>
+        <p style="margin-top: 10px; color: #666; font-size: 0.9em;">
+            Haz clic para generar una versión imprimible de tu CV
+        </p>
+    </footer>
+
+    <script src="cv-generator.js"></script>
 </body>
 </html>
