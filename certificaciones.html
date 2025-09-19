@@ -138,6 +138,40 @@
             background-color: #1e3d6f;
         }
 
+        .certificate-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .certificate-container {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .certificate-badge-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .certificate-image {
+            max-width: 280px;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .credly-badge-container {
+            flex-shrink: 0;
+        }
+
         .status-badge {
             display: inline-block;
             padding: 4px 8px;
@@ -187,6 +221,16 @@
             .certification-date {
                 margin-top: 5px;
             }
+
+            .certificate-badge-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .certificate-image {
+                max-width: 250px;
+            }
         }
     </style>
 </head>
@@ -195,7 +239,7 @@
     
     <div class="header">
         <h1>Certificaciones Profesionales</h1>
-        <p>Felipe DSA - Especialista en Tecnología y Ciberseguridad</p>
+        <!-- <p></p> -->
     </div>
 
     <div class="section">
@@ -209,7 +253,7 @@
                 </div>
                 <div>
                     <div class="certification-date">2024</div>
-                    <span class="status-badge status-active">Activa</span>
+                    <span class="status-badge status-active">Completado</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -224,7 +268,10 @@
                     <li>Comprensión de los principios de confidencialidad, integridad y disponibilidad</li>
                 </ul>
             </div>
-            <a href="#" class="certification-link">Ver Certificado</a>
+            <a href="#" class="certification-link" onclick="showCredlyBadge(event)">Ver Certificado</a>
+            <div id="credly-badge-cybersecurity" style="display: none; margin-top: 15px; text-align: center;">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6dfbce27-20e7-42d8-b124-a8c6f34934b0" data-share-badge-host="https://www.credly.com"></div>
+            </div>
         </div>
 
         <div class="certification">
@@ -235,7 +282,7 @@
                 </div>
                 <div>
                     <div class="certification-date">2024</div>
-                    <span class="status-badge status-active">Activa</span>
+                    <span class="status-badge status-active">Completado</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -256,12 +303,12 @@
         <div class="certification">
             <div class="certification-header">
                 <div>
-                    <div class="certification-title">Curso Técnico en Ciberseguridad</div>
-                    <div class="certification-issuer">Academia DarFe.es</div>
+                    <div class="certification-title">Curso Técnico en Ciberseguridad y Redes TI</div>
+                    <div class="certification-issuer">Academia DarFe Learning Consulting.</div>
                 </div>
                 <div>
                     <div class="certification-date">2024</div>
-                    <span class="status-badge status-active">Activa</span>
+                    <span class="status-badge status-active">Completado</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -276,7 +323,17 @@
                     <li>Respuesta a incidentes de seguridad</li>
                 </ul>
             </div>
-            <a href="#" class="certification-link">Ver Certificado</a>
+            <a href="#" class="certification-link" onclick="showCredlyBadge2(event)">Ver Certificado</a>
+            <div id="credly-badge-cybersecurity-networks" style="display: none; margin-top: 15px; text-align: center;">
+                <div class="certificate-badge-container">
+                    <div class="certificate-container">
+                        <img src="Certificado DarfeLC.png" alt="Certificado Técnico en Ciberseguridad y Redes TI - DarFe Learning Consulting" class="certificate-image" onclick="openCertificateImage(this.src)">
+                    </div>
+                    <div class="credly-badge-container">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d9c8e0ad-f5a3-444e-81f2-9709a0ed320b" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="certification">
@@ -287,7 +344,7 @@
                 </div>
                 <div>
                     <div class="certification-date">2024</div>
-                    <span class="status-badge status-active">Activa</span>
+                    <span class="status-badge status-active">Completado</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -318,7 +375,7 @@
                 </div>
                 <div>
                     <div class="certification-date">En Progreso</div>
-                    <span class="status-badge status-pending">En Curso</span>
+                    <span class="status-badge status-pending">Planificada</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -373,8 +430,8 @@
                     <div class="certification-issuer">Autodidacta - Proyectos Personales</div>
                 </div>
                 <div>
-                    <div class="certification-date">2024</div>
-                    <span class="status-badge status-active">Completado</span>
+                    <div class="certification-date">2025</div>
+                    <span class="status-badge status-active">En Progreso</span>
                 </div>
             </div>
             <div class="certification-description">
@@ -387,5 +444,51 @@
         <p><strong>Nota:</strong> Todas las certificaciones están respaldadas por documentación oficial y pueden ser verificadas mediante solicitud.</p>
         <p>Para más información sobre certificaciones específicas, contactar a: <a href="mailto:felipedesananiceto@gmail.com">felipedesananiceto@gmail.com</a></p>
     </div>
+
+    <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    <script>
+        function showCredlyBadge(event) {
+            event.preventDefault();
+            const badgeDiv = document.getElementById('credly-badge-cybersecurity');
+            if (badgeDiv.style.display === 'none') {
+                badgeDiv.style.display = 'block';
+                // Cargar el script de Credly si no está ya cargado
+                if (!window.credlyLoaded) {
+                    const script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '//cdn.credly.com/assets/utilities/embed.js';
+                    document.head.appendChild(script);
+                    window.credlyLoaded = true;
+                }
+            } else {
+                badgeDiv.style.display = 'none';
+            }
+        }
+
+        function showCredlyBadge2(event) {
+            event.preventDefault();
+            const badgeDiv = document.getElementById('credly-badge-cybersecurity-networks');
+            if (badgeDiv.style.display === 'none') {
+                badgeDiv.style.display = 'block';
+                // Cargar el script de Credly si no está ya cargado
+                if (!window.credlyLoaded) {
+                    const script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.async = true;
+                    script.src = '//cdn.credly.com/assets/utilities/embed.js';
+                    document.head.appendChild(script);
+                    window.credlyLoaded = true;
+                }
+            } else {
+                badgeDiv.style.display = 'none';
+            }
+        }
+
+        function openCertificateImage(imageSrc) {
+            // Abrir la imagen en una nueva ventana/pestaña
+            window.open(imageSrc, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+        }
+    </script>
 </body>
 </html>
