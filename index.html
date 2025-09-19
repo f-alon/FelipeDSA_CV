@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe DSA - Curriculum Vitae</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .header .contact-info {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .entry-date {
+            font-style: italic;
+            color: #666;
+        }
+
+        .entry-subtitle {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .entry-description {
+            margin-left: 0;
+            text-align: justify;
+        }
+
+        .entry-description ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+
+        .entry-description li {
+            margin-bottom: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-category {
+            margin-bottom: 15px;
+        }
+
+        .skill-category h4 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .skill-category p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .publication {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .publication-authors {
+            margin-bottom: 5px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .publication-venue {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .publication-details {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        @media print {
+            body {
+                max-width: none;
+                margin: 0;
+                padding: 15px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .entry-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Felipe DSA</h1>
+        <div class="contact-info">
+            <p>Email: felipe.dsa@email.com | Teléfono: +1 (555) 123-4567</p>
+            <p>LinkedIn: linkedin.com/in/felipe-dsa | GitHub: github.com/felipe-dsa</p>
+            <p>Ubicación: Ciudad, País</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Perfil Profesional</h2>
+        <p>Profesional especializado en Data Science y Analytics con más de 5 años de experiencia en el desarrollo de soluciones de inteligencia de negocios, análisis predictivo y machine learning. Experto en Python, R, SQL y herramientas de visualización de datos. Comprometido con la excelencia técnica y la entrega de resultados que generan valor empresarial.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Educación</h2>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Maestría en Data Science</div>
+                <div class="entry-date">2020 - 2022</div>
+            </div>
+            <div class="entry-subtitle">Universidad Tecnológica</div>
+            <div class="entry-description">
+                <p>Especialización en Machine Learning y Big Data Analytics. Tesis: "Optimización de Algoritmos de Clustering para Análisis de Comportamiento del Cliente"</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Licenciatura en Ingeniería de Sistemas</div>
+                <div class="entry-date">2016 - 2020</div>
+            </div>
+            <div class="entry-subtitle">Universidad Nacional</div>
+            <div class="entry-description">
+                <p>Graduado con honores. Proyecto final: "Sistema de Recomendación basado en Machine Learning para E-commerce"</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Experiencia Profesional</h2>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Senior Data Scientist</div>
+                <div class="entry-date">2022 - Presente</div>
+            </div>
+            <div class="entry-subtitle">TechCorp Solutions</div>
+            <div class="entry-description">
+                <ul>
+                    <li>Lideré el desarrollo de modelos de machine learning que mejoraron la precisión de predicción en un 35%</li>
+                    <li>Implementé pipelines de datos automatizados que redujeron el tiempo de procesamiento en un 60%</li>
+                    <li>Colaboré con equipos cross-funcionales para definir estrategias de datos y KPIs</li>
+                    <li>Mentoreé a 3 junior data scientists en técnicas avanzadas de análisis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Data Analyst</div>
+                <div class="entry-date">2020 - 2022</div>
+            </div>
+            <div class="entry-subtitle">Analytics Pro</div>
+            <div class="entry-description">
+                <ul>
+                    <li>Desarrollé dashboards interactivos que facilitaron la toma de decisiones ejecutivas</li>
+                    <li>Automatizé reportes mensuales, ahorrando 20 horas de trabajo manual por mes</li>
+                    <li>Realicé análisis de cohortes y segmentación de clientes para estrategias de marketing</li>
+                    <li>Colaboré en la implementación de herramientas de BI (Tableau, Power BI)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Junior Data Scientist</div>
+                <div class="entry-date">2019 - 2020</div>
+            </div>
+            <div class="entry-subtitle">DataStart Inc.</div>
+            <div class="entry-description">
+                <ul>
+                    <li>Desarrollé modelos de clasificación para detección de fraude con 92% de precisión</li>
+                    <li>Participé en proyectos de análisis exploratorio de datos (EDA) para startups</li>
+                    <li>Contribuí al desarrollo de APIs para servicios de machine learning</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Lenguajes de Programación</h4>
+                <p>Python, R, SQL, JavaScript, Scala</p>
+            </div>
+            <div class="skill-category">
+                <h4>Machine Learning</h4>
+                <p>Scikit-learn, TensorFlow, PyTorch, XGBoost, Keras</p>
+            </div>
+            <div class="skill-category">
+                <h4>Análisis de Datos</h4>
+                <p>Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
+            </div>
+            <div class="skill-category">
+                <h4>Bases de Datos</h4>
+                <p>PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch</p>
+            </div>
+            <div class="skill-category">
+                <h4>Big Data</h4>
+                <p>Apache Spark, Hadoop, Kafka, Airflow</p>
+            </div>
+            <div class="skill-category">
+                <h4>Visualización</h4>
+                <p>Tableau, Power BI, D3.js, Streamlit, Dash</p>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud Computing</h4>
+                <p>AWS, Google Cloud Platform, Azure, Docker, Kubernetes</p>
+            </div>
+            <div class="skill-category">
+                <h4>Herramientas</h4>
+                <p>Git, Jupyter, VS Code, RStudio, Apache Superset</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Publicaciones y Proyectos</h2>
+        
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Artículo Científico</div>
+                <div class="entry-date">2023</div>
+            </div>
+            <div class="publication">
+                <div class="publication-authors">DSA, F., Smith, J., & Johnson, A.</div>
+                <div class="publication-title">"Advanced Clustering Techniques for Customer Segmentation in E-commerce"</div>
+                <div class="publication-venue">Journal of Data Science and Analytics</div>
+                <div class="publication-details">Vol. 15, No. 3, pp. 245-267. DOI: 10.1234/jdsa.2023.001</div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Proyecto Open Source</div>
+                <div class="entry-date">2022 - Presente</div>
+            </div>
+            <div class="entry-subtitle">ML-Pipeline-Framework</div>
+            <div class="entry-description">
+                <p>Framework de Python para automatización de pipelines de machine learning. Más de 500 estrellas en GitHub y utilizado por 50+ desarrolladores.</p>
+            </div>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Conferencia</div>
+                <div class="entry-date">2023</div>
+            </div>
+            <div class="entry-subtitle">Data Science Summit 2023</div>
+            <div class="entry-description">
+                <p>Ponencia: "Implementación de MLOps en Producción: Lecciones Aprendidas y Mejores Prácticas"</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certificaciones</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">AWS Certified Machine Learning - Specialty</div>
+                <div class="entry-date">2023</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Google Cloud Professional Data Engineer</div>
+                <div class="entry-date">2022</div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">Certified Analytics Professional (CAP)</div>
+                <div class="entry-date">2021</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Idiomas</h2>
+        <div class="entry-description">
+            <p><strong>Español:</strong> Nativo</p>
+            <p><strong>Inglés:</strong> Avanzado (TOEFL 110/120)</p>
+            <p><strong>Portugués:</strong> Intermedio</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Referencias</h2>
+        <div class="entry-description">
+            <p>Disponibles bajo solicitud</p>
+        </div>
+    </div>
+</body>
+</html>
